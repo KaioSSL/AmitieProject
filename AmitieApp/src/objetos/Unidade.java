@@ -13,7 +13,7 @@ import java.util.Date;
  */
 public class Unidade {
     private Integer cod;
-    private String desc;
+    private String des;
     private String sigla;
     private Date dat_cad;
     
@@ -27,12 +27,12 @@ public class Unidade {
         this.cod = cod;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDes() {
+        return des;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDes(String des) {
+        this.des = des;
     }
 
     public String getSigla() {

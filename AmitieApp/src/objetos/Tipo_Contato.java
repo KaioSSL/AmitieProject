@@ -5,6 +5,8 @@
  */
 package objetos;
 
+import java.util.Date;
+
 /**
  *
  * @author kaiof
@@ -13,11 +15,20 @@ public class Tipo_Contato {
     private Integer cod;
     private String des;
     private String sigla;
+    private Date dat_cad;
     
     public Tipo_Contato(){}
 
     public Integer getCod() {
         return cod;
+    }
+
+    public Date getDat_cad() {
+        return dat_cad;
+    }
+
+    public void setDat_cad(Date dat_cad) {
+        this.dat_cad = dat_cad;
     }
 
     public void setCod(Integer cod) {

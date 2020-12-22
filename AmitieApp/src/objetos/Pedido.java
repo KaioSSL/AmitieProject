@@ -19,7 +19,7 @@ public class Pedido {
     private Integer status;
     private Integer situacao;
     private Integer cod_pessoa;
-    private Integer cod_documento_pessoa;
+    private Integer cod_pessoa_documento;
     
     public Pedido(){}
     
@@ -79,12 +79,12 @@ public class Pedido {
         this.cod_pessoa = cod_pessoa;
     }
 
-    public Integer getCod_documento_pessoa() {
-        return cod_documento_pessoa;
+    public Integer getCod_pessoa_documento() {
+        return cod_pessoa_documento;
     }
 
-    public void setCod_documento_pessoa(Integer cod_documento_pessoa) {
-        this.cod_documento_pessoa = cod_documento_pessoa;
+    public void setCod_pessoa_documento(Integer cod_pessoa_documento) {
+        this.cod_pessoa_documento = cod_pessoa_documento;
     }
     
     
