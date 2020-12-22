@@ -17,7 +17,6 @@ public class Item {
     private Integer cod_pedido;
     private Integer tipo;
     private Float vlr_unit;
-    private Float qtd;
     private Float vlr_total;
     private Float unidade_total;
     private Date dat_cad;
@@ -54,14 +53,6 @@ public class Item {
 
     public void setVlr_unit(Float vlr_unit) {
         this.vlr_unit = vlr_unit;
-    }
-
-    public Float getQtd() {
-        return qtd;
-    }
-
-    public void setQtd(Float qtd) {
-        this.qtd = qtd;
     }
 
     public Float getVlr_total() {

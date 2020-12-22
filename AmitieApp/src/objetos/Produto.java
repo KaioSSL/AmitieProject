@@ -6,6 +6,7 @@
 package objetos;
 
 import java.util.Date;
+import java.util.LinkedList;
 
 /**
  *
@@ -20,8 +21,8 @@ public class Produto {
     private Integer val_dias;
     private Integer cod_unidade;
     private Integer cod_categoria;
+    private LinkedList<Produto_Materia> materia;    
     
-
     public Produto(){}
     
     public Integer getCod() {
@@ -88,5 +89,11 @@ public class Produto {
         this.cod_categoria = cod_categoria;
     }
 
-    
+    public LinkedList<Produto_Materia> getMateria() {
+        return materia;
+    }
+
+    public void setMateria(LinkedList<Produto_Materia> materia) {
+        this.materia = materia;
+    }
 }
