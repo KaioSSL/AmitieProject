@@ -16,6 +16,15 @@ public class Documento {
     private String documento;
     private Date dat_cad;
     private Integer cod_tipo_doc;
+    private String des;
+
+    public String getDes() {
+        return des;
+    }
+
+    public void setDes(String des) {
+        this.des = des;
+    }
 
     public Integer getCod_tipo_doc() {
         return cod_tipo_doc;

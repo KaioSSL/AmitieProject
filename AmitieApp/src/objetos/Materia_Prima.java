@@ -5,6 +5,8 @@
  */
 package objetos;
 
+import java.util.Date;
+
 /**
  *
  * @author kaiof
@@ -17,8 +19,17 @@ public class Materia_Prima {
     private Integer cod_unidade;
     private String fabricante;
     private String marca;
+    private Date dat_cad;
 
     public Materia_Prima(){}
+
+    public Date getDat_cad() {
+        return dat_cad;
+    }
+
+    public void setDat_cad(Date dat_cad) {
+        this.dat_cad = dat_cad;
+    }
     
     public Integer getCod() {
         return cod;

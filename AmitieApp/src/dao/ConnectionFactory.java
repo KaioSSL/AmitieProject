@@ -19,9 +19,8 @@ import java.util.logging.Logger;
  * @author 20171tpmi0371
  */
 public class ConnectionFactory {
-    //private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:postgresql://localhost:5432/";
     private static final String DB = "AmitieProject";
+    private static final String URL = "jdbc:postgresql://localhost:5432/" + DB;
     private static final String USER = "postgres";
     private static final String PASS = "1234";
    

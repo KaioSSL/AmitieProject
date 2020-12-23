@@ -16,9 +16,18 @@ public class Contato {
     private Integer cod_tipo_contato;
     private String contato;
     private Date dat_cad;
+    private String des;
     
     public Contato(){}
 
+    public String getDes() {
+        return des;
+    }
+
+    public void setDes(String des) {
+        this.des = des;
+    }
+    
     public Integer getCod() {
         return cod;
     }
