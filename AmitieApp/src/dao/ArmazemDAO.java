@@ -15,7 +15,7 @@ import objetos.Armazem;
  *
  * @author kaiof
  */
-public class ArmazemDAO {
+public class ArmazemDAO extends Armazem {
         public static boolean insert(Armazem amz){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

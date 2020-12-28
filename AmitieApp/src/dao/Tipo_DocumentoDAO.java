@@ -15,7 +15,7 @@ import objetos.Tipo_Documento;
  *
  * @author kaiof
  */
-public class Tipo_DocumentoDAO {
+public class Tipo_DocumentoDAO extends Tipo_Documento {
     public static boolean insert(Tipo_Documento td){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

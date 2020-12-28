@@ -15,7 +15,7 @@ import objetos.Pessoa_Contato;
  *
  * @author kaiof
  */
-public class Pessoa_ContatoDAO {
+public class Pessoa_ContatoDAO extends Pessoa_Contato {
     public static boolean insert(Pessoa_Contato pesc){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

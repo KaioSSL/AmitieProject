@@ -15,7 +15,7 @@ import objetos.Pessoa_Endereco;
  *
  * @author kaiof
  */
-public class Pessoa_EnderecoDAO {
+public class Pessoa_EnderecoDAO extends Pessoa_Endereco {
     public static boolean insert(Pessoa_Endereco pese){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

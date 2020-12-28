@@ -15,7 +15,7 @@ import objetos.Pedido;
  *
  * @author kaiof
  */
-public class PedidoDAO {
+public class PedidoDAO extends Pedido {
     public static boolean insert(Pedido ped){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

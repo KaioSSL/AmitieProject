@@ -15,7 +15,7 @@ import objetos.Tipo_Contato;
  *
  * @author kaiof
  */
-public class Tipo_ContatoDAO {
+public class Tipo_ContatoDAO extends Tipo_Contato{
     public static boolean insert(Tipo_Contato tc){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

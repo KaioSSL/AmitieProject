@@ -15,7 +15,7 @@ import objetos.Pagamento;
  *
  * @author kaiof
  */
-public class PagamentoDAO {
+public class PagamentoDAO extends Pagamento {
         public static boolean insert(Pagamento pgt){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

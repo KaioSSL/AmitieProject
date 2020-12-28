@@ -15,7 +15,7 @@ import objetos.Endereco;
  *
  * @author kaiof
  */
-public class EnderecoDAO {
+public class EnderecoDAO extends Endereco {
     public static boolean insert(Endereco end){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

@@ -15,7 +15,7 @@ import objetos.Produto;
  *
  * @author kaiof
  */
-public class ProdutoDAO {
+public class ProdutoDAO extends Produto {
     public static boolean insert(Produto prod){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

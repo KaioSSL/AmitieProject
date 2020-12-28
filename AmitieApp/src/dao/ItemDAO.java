@@ -17,7 +17,7 @@ import objetos.Item_Saida;
  *
  * @author kaiof
  */
-public class ItemDAO {
+public class ItemDAO extends Item {
         public static boolean insert(Item item){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

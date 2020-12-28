@@ -15,7 +15,7 @@ import objetos.Materia_Prima;
  *
  * @author kaiof
  */
-public class Materia_PrimaDAO {
+public class Materia_PrimaDAO extends Materia_Prima {
     public static boolean insert(Materia_Prima mat){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

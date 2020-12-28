@@ -15,7 +15,7 @@ import objetos.Unidade;
  *
  * @author kaiof
  */
-public class UnidadeDAO {
+public class UnidadeDAO extends Unidade {
     public static boolean insert(Unidade un){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

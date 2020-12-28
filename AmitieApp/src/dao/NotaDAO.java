@@ -15,7 +15,7 @@ import objetos.Nota;
  *
  * @author kaiof
  */
-public class NotaDAO {
+public class NotaDAO extends Nota {
         public static boolean insert(Nota nota){
         //Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();
