@@ -17,12 +17,31 @@ public class Item {
     private Integer cod_pedido;
     private Integer tipo;
     private Float vlr_unit;
+    private Float qtd;
     private Float vlr_total;
     private Float unidade_total;
     private Date dat_cad;
 
     
     public Item(){}
+
+    public Integer getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(Integer tipo) {
+        this.tipo = tipo;
+    }
+
+    public Float getQtd() {
+        return qtd;
+    }
+
+    public void setQtd(Float qtd) {
+        this.qtd = qtd;
+    }
+    
+    
     public Integer getCod() {
         return cod;
     }
@@ -39,12 +58,12 @@ public class Item {
         this.cod_armazem = cod_armazem;
     }
 
-    public Integer getCod_nota() {
+    public Integer getCod_pedido() {
         return cod_pedido;
     }
 
-    public void setCod_nota(Integer cod_nota) {
-        this.cod_pedido = cod_nota;
+    public void setCod_pedido(Integer cod_pedido) {
+        this.cod_pedido = cod_pedido;
     }
 
     public Float getVlr_unit() {
