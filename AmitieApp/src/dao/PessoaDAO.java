@@ -26,7 +26,7 @@ public class PessoaDAO extends Pessoa {
             stmt = con.prepareStatement("INSERT INTO PESSOA(NOME,DAT_NASC,DAT_CAD) VALUES(?,?,CURRENT_DATE)");            
             //Insiro os parametros em cada posição e com seu tipo 
             stmt.setString(1, pes.getNome());
-            stmt.setDate(2, (java.sql.Date) pes.getDat_nasc());                    
+            stmt.setDate(2, new java.sql.Date(pes.getDat_nasc().getTime()));                    
             //executeUpdate é utilizado para operações que não retornam um result set, operações DML
             stmt.executeUpdate();
         }catch(SQLException e){

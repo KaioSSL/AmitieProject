@@ -26,7 +26,7 @@ public class PedidoDAO extends Pedido {
             stmt = con.prepareStatement("INSERT INTO PEDIDO(TIPO,DAT_PEDIDO,DAT_CAD,STATUS,SITUACAO,COD_PESSOA,COD_PESSOA_DOCUMENTO) VALUES(?,?,CURRENT_DATE,?,?,?,?)");            
             //Insiro os parametros em cada posição e com seu tipo 
             stmt.setInt(1, ped.getTipo());
-            stmt.setDate(2, (java.sql.Date) ped.getDat_pedido());
+            stmt.setDate(2, new java.sql.Date(ped.getDat_pedido().getTime()) );
             stmt.setInt(3, ped.getStatus());
             stmt.setInt(4, ped.getSituacao());
             stmt.setInt(5, ped.getCod_pessoa());
@@ -73,7 +73,7 @@ public class PedidoDAO extends Pedido {
             stmt = con.prepareStatement("UPDATE PEDIDO SET TIPO = ?, DAT_PEDIDO = ?, STATUS = ?, SITUACAO = ?, COD_PESSOA = ?, COD_PESSOA_DOCUMENTO = ? WHERE COD = ?");
             //Insiro os parametros em cada posição e com seu tipo 
             stmt.setInt(1, ped.getTipo());
-            stmt.setDate(2, (java.sql.Date) ped.getDat_pedido());
+            stmt.setDate(2, new java.sql.Date(ped.getDat_pedido().getTime()));
             stmt.setInt(3, ped.getStatus());
             stmt.setInt(4, ped.getSituacao());
             stmt.setInt(5, ped.getCod_pessoa());

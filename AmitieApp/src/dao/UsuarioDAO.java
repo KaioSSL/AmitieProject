@@ -68,7 +68,7 @@ public class UsuarioDAO extends Usuario{
         PreparedStatement stmt = null;
         try{
             //Escrevo minha query utilizando ? para posicionar os parametros
-            stmt = con.prepareStatement("UPDATE USUARIO DES = ?, ROLE = ?, LOGIN = ?, SENHA = ? WHERE COD = ?");
+            stmt = con.prepareStatement("UPDATE USUARIO SET DES = ?, ROLE = ?, LOGIN = ?, SENHA = ? WHERE COD = ?");
             //Insiro os parametros em cada posição e com seu tipo 
             stmt.setString(1, us.getDes());
             stmt.setInt(2, us.getRole());

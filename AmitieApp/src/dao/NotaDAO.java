@@ -26,7 +26,7 @@ public class NotaDAO extends Nota {
             stmt = con.prepareStatement("INSERT INTO NOTA(VALOR,DAT_CAD,DAT_NOTA,SITUACAO,STATUS,COD_PEDIDO,COD_USUARIO) VALUES(?,CURRENT_DATE,?,?,?,?,?)");
             //Insiro os parametros em cada posição e com seu tipo 
             stmt.setFloat(1, nota.getValor());
-            stmt.setDate(2, (java.sql.Date) nota.getDat_nota());
+            stmt.setDate(2, new java.sql.Date(nota.getDat_nota().getTime()) );
             stmt.setInt(3, nota.getSituacao());
             stmt.setInt(4, nota.getStatus());
             stmt.setInt(5, nota.getCod_pedido());
@@ -73,7 +73,7 @@ public class NotaDAO extends Nota {
             stmt = con.prepareStatement("UPDATE NOTA SET VALOR = ?, DAT_NOTA = ?, SITUACAO = ?, STATUS = ?, COD_PEDIDO = ?, COD_USUARIO = ? WHERE COD = ?");
             //Insiro os parametros em cada posição e com seu tipo 
             stmt.setFloat(1, nota.getValor());
-            stmt.setDate(2, (java.sql.Date) nota.getDat_nota());
+            stmt.setDate(2, new java.sql.Date(nota.getDat_nota().getTime()));
             stmt.setInt(3, nota.getSituacao());
             stmt.setInt(4, nota.getStatus());
             stmt.setInt(5, nota.getCod_pedido());
