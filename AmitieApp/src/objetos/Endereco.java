@@ -21,8 +21,9 @@ public class Endereco {
     private Date dat_cad;
     private String CEP;
     private String complemento;
-    
-    public Endereco(){}
+
+    public Endereco() {
+    }
 
     public Integer getCod() {
         return cod;
@@ -95,5 +96,5 @@ public class Endereco {
     public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
-    
+
 }

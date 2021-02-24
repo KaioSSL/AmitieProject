@@ -11,8 +11,9 @@ package objetos;
  */
 public class Item_Saida extends Item {
     private Integer cod_produto;
-   
-    public Item_Saida(){}
+
+    public Item_Saida() {
+    }
 
     public Integer getCod_produto() {
         return cod_produto;

@@ -16,70 +16,75 @@ import objetos.Pessoa_Documento;
  * @author kaiof
  */
 public class Pessoa_DocumentoDAO extends Pessoa_Documento {
-    public static boolean insert(Pessoa_Documento pesd){
-        //Crio Conexão com o Servidor do Banco
+    public static boolean insert(Pessoa_Documento pesd) {
+        // Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();
-        //Crio meu Statement para tratar a query á ser utilizada
+        // Crio meu Statement para tratar a query á ser utilizada
         PreparedStatement stmt = null;
-        try{
-            //Escrevo minha query utilizando ? para posicionar os parametros
-            stmt = con.prepareStatement("INSERT INTO PESSOA_DOCUMENTO(COD_PESSOA,COD_DOCUMENTO) VALUES(?,?)");            
-            //Insiro os parametros em cada posição e com seu tipo 
+        try {
+            // Escrevo minha query utilizando ? para posicionar os parametros
+            stmt = con.prepareStatement("INSERT INTO PESSOA_DOCUMENTO(COD_PESSOA,COD_DOCUMENTO) VALUES(?,?)");
+            // Insiro os parametros em cada posição e com seu tipo
             stmt.setInt(1, pesd.getCod_pessoa());
             stmt.setInt(2, pesd.getCod_documento());
-            //executeUpdate é utilizado para operações que não retornam um result set, operações DML
+            // executeUpdate é utilizado para operações que não retornam um result set,
+            // operações DML
             stmt.executeUpdate();
-        }catch(SQLException e){
-            //Caso erro, mostro ao usuário.
-            JOptionPane.showMessageDialog(null,"Erro de inserção na classe Pessoa Documento " + e.getMessage());
+        } catch (SQLException e) {
+            // Caso erro, mostro ao usuário.
+            JOptionPane.showMessageDialog(null, "Erro de inserção na classe Pessoa Documento " + e.getMessage());
             return false;
-        }finally{
-            ConnectionFactory.closeConnection(con,stmt);
-        }
-        return true;
-    } 
-    public static boolean delete(Pessoa_Documento pesc){
-        //Crio Conexão com o Servidor do Banco
-        Connection con = ConnectionFactory.getConnection();
-        //Crio meu Statement para tratar a query á ser utilizada
-        PreparedStatement stmt = null;
-        try{
-            //Escrevo minha query utilizando ? para posicionar os parametros
-            stmt = con.prepareStatement("DELETE FROM PESSOA_DOCUMENTO WHERE COD = ?");
-            //Insiro os parametros em cada posição e com seu tipo 
-            stmt.setInt(1,pesc.getCod());
-            //executeUpdate é utilizado para operações que não retornam um result set, operações DML
-            stmt.executeUpdate();          
-        }catch(SQLException e){
-            //Caso erro, mostro ao usuário.
-            JOptionPane.showMessageDialog(null,"Erro de deleção na classe Pessoa Documento " + e.getMessage());
-            return false;
-        }finally{
-            ConnectionFactory.closeConnection(con,stmt);
+        } finally {
+            ConnectionFactory.closeConnection(con, stmt);
         }
         return true;
     }
-    public static boolean update(Pessoa_Documento pesc){
-        //Crio Conexão com o Servidor do Banco
+
+    public static boolean delete(Pessoa_Documento pesc) {
+        // Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();
-        //Crio meu Statement para tratar a query á ser utilizada
+        // Crio meu Statement para tratar a query á ser utilizada
         PreparedStatement stmt = null;
-        try{
-            //Escrevo minha query utilizando ? para posicionar os parametros
+        try {
+            // Escrevo minha query utilizando ? para posicionar os parametros
+            stmt = con.prepareStatement("DELETE FROM PESSOA_DOCUMENTO WHERE COD = ?");
+            // Insiro os parametros em cada posição e com seu tipo
+            stmt.setInt(1, pesc.getCod());
+            // executeUpdate é utilizado para operações que não retornam um result set,
+            // operações DML
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            // Caso erro, mostro ao usuário.
+            JOptionPane.showMessageDialog(null, "Erro de deleção na classe Pessoa Documento " + e.getMessage());
+            return false;
+        } finally {
+            ConnectionFactory.closeConnection(con, stmt);
+        }
+        return true;
+    }
+
+    public static boolean update(Pessoa_Documento pesc) {
+        // Crio Conexão com o Servidor do Banco
+        Connection con = ConnectionFactory.getConnection();
+        // Crio meu Statement para tratar a query á ser utilizada
+        PreparedStatement stmt = null;
+        try {
+            // Escrevo minha query utilizando ? para posicionar os parametros
             stmt = con.prepareStatement("UPDATE PESSOA_DOCUMENTO SET COD_PESSOA = ?, COD_DOCUMENTO = ? WHERE COD = ?");
-            //Insiro os parametros em cada posição e com seu tipo 
+            // Insiro os parametros em cada posição e com seu tipo
             stmt.setInt(1, pesc.getCod_pessoa());
             stmt.setInt(2, pesc.getCod_documento());
             stmt.setInt(3, pesc.getCod());
-            //executeUpdate é utilizado para operações que não retornam um result set, operações DML
-            stmt.executeUpdate();            
-        }catch(SQLException e){
-            //Caso erro, mostro ao usuário.
-            JOptionPane.showMessageDialog(null,"Erro de update na classe Pessoa Documento " + e.getMessage());
+            // executeUpdate é utilizado para operações que não retornam um result set,
+            // operações DML
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            // Caso erro, mostro ao usuário.
+            JOptionPane.showMessageDialog(null, "Erro de update na classe Pessoa Documento " + e.getMessage());
             return false;
-        }finally{
-            ConnectionFactory.closeConnection(con,stmt);
+        } finally {
+            ConnectionFactory.closeConnection(con, stmt);
         }
         return true;
-    }    
+    }
 }

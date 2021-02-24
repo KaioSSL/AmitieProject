@@ -14,8 +14,9 @@ public class Pessoa_Contato {
     private Integer cod_pessoa;
     private Integer cod_contato;
 
-    public Pessoa_Contato(){}
-    
+    public Pessoa_Contato() {
+    }
+
     public Integer getCod() {
         return cod;
     }
@@ -39,5 +40,5 @@ public class Pessoa_Contato {
     public void setCod_contato(Integer cod_contato) {
         this.cod_contato = cod_contato;
     }
-    
+
 }

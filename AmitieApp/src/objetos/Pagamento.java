@@ -63,5 +63,5 @@ public class Pagamento {
 
     public void setCod_nota(Integer cod_nota) {
         this.cod_nota = cod_nota;
-    }    
+    }
 }

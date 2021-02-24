@@ -18,9 +18,10 @@ public class Usuario {
     private String login;
     private String senha;
     private Date dat_cad;
-    
-    public Usuario(){}
-    
+
+    public Usuario() {
+    }
+
     public Integer getCod() {
         return cod;
     }
@@ -68,6 +69,5 @@ public class Usuario {
     public void setDat_cad(Date dat_cad) {
         this.dat_cad = dat_cad;
     }
-    
-    
+
 }

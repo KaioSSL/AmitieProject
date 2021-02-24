@@ -20,9 +20,10 @@ public class Pedido {
     private Integer situacao;
     private Integer cod_pessoa;
     private Integer cod_pessoa_documento;
-    
-    public Pedido(){}
-    
+
+    public Pedido() {
+    }
+
     public Integer getCod() {
         return cod;
     }
@@ -86,7 +87,5 @@ public class Pedido {
     public void setCod_pessoa_documento(Integer cod_pessoa_documento) {
         this.cod_pessoa_documento = cod_pessoa_documento;
     }
-    
-    
-    
+
 }

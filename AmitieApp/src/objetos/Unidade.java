@@ -16,8 +16,9 @@ public class Unidade {
     private String des;
     private String sigla;
     private Date dat_cad;
-    
-    public Unidade(){}
+
+    public Unidade() {
+    }
 
     public Integer getCod() {
         return cod;
@@ -50,7 +51,5 @@ public class Unidade {
     public void setDat_cad(Date dat_cad) {
         this.dat_cad = dat_cad;
     }
-    
-    
-    
+
 }

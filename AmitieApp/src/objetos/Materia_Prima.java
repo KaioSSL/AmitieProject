@@ -21,7 +21,8 @@ public class Materia_Prima {
     private String marca;
     private Date dat_cad;
 
-    public Materia_Prima(){}
+    public Materia_Prima() {
+    }
 
     public Date getDat_cad() {
         return dat_cad;
@@ -30,7 +31,7 @@ public class Materia_Prima {
     public void setDat_cad(Date dat_cad) {
         this.dat_cad = dat_cad;
     }
-    
+
     public Integer getCod() {
         return cod;
     }
@@ -86,5 +87,5 @@ public class Materia_Prima {
     public void setMarca(String marca) {
         this.marca = marca;
     }
-    
+
 }

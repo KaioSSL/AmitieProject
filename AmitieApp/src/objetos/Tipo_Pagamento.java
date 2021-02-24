@@ -16,8 +16,9 @@ public class Tipo_Pagamento {
     private String des;
     private String sigla;
     private Date dat_cad;
-    
-    public Tipo_Pagamento(){}
+
+    public Tipo_Pagamento() {
+    }
 
     public Date getDat_cad() {
         return dat_cad;

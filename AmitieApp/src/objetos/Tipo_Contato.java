@@ -16,8 +16,9 @@ public class Tipo_Contato {
     private String des;
     private String sigla;
     private Date dat_cad;
-    
-    public Tipo_Contato(){}
+
+    public Tipo_Contato() {
+    }
 
     public Integer getCod() {
         return cod;
@@ -50,5 +51,5 @@ public class Tipo_Contato {
     public void setSigla(String sigla) {
         this.sigla = sigla;
     }
-    
+
 }

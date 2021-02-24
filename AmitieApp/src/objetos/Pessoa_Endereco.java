@@ -13,8 +13,10 @@ public class Pessoa_Endereco {
     private Integer cod;
     private Integer cod_endereco;
     private Integer cod_pessoa;
-    
-    public Pessoa_Endereco(){}
+
+    public Pessoa_Endereco() {
+    }
+
     public Integer getCod() {
         return cod;
     }
@@ -38,5 +40,5 @@ public class Pessoa_Endereco {
     public void setCod_pessoa(Integer cod_pessoa) {
         this.cod_pessoa = cod_pessoa;
     }
-    
+
 }

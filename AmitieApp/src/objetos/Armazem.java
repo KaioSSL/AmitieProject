@@ -18,8 +18,9 @@ public class Armazem {
     private Integer cod_contato;
     private Date dat_cad;
     private String des;
-    
-    public Armazem(){}
+
+    public Armazem() {
+    }
 
     public Integer getCod_contato() {
         return cod_contato;
@@ -68,7 +69,5 @@ public class Armazem {
     public void setDat_cad(Date dat_cad) {
         this.dat_cad = dat_cad;
     }
-    
-    
-    
+
 }

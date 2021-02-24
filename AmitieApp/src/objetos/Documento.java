@@ -33,8 +33,9 @@ public class Documento {
     public void setCod_tipo_doc(Integer cod_tipo_doc) {
         this.cod_tipo_doc = cod_tipo_doc;
     }
-    
-    public Documento(){}
+
+    public Documento() {
+    }
 
     public Integer getCod() {
         return cod;
@@ -59,5 +60,5 @@ public class Documento {
     public void setDat_cad(Date dat_cad) {
         this.dat_cad = dat_cad;
     }
-    
+
 }

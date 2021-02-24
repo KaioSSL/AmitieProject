@@ -18,8 +18,10 @@ public class Produto_Materia {
     private Float unidade_total;
     private Float vlr_total_custo;
     private Float vlr_total_venda;
-    
-    public Produto_Materia(){}
+
+    public Produto_Materia() {
+    }
+
     public Integer getCod() {
         return cod;
     }
@@ -83,7 +85,5 @@ public class Produto_Materia {
     public void setVlr_total_venda(Float vlr_total_venda) {
         this.vlr_total_venda = vlr_total_venda;
     }
-    
-    
-    
+
 }

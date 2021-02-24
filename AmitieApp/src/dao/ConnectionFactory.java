@@ -13,7 +13,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 /**
  *
  * @author 20171tpmi0371
@@ -23,53 +22,46 @@ public class ConnectionFactory {
     private static final String URL = "jdbc:postgresql://localhost:5432/" + DB;
     private static final String USER = "postgres";
     private static final String PASS = "1234";
-   
-    public static Connection getConnection(){
+
+    public static Connection getConnection() {
         try {
-            Connection con =  DriverManager.getConnection(URL,USER,PASS);            
+            Connection con = DriverManager.getConnection(URL, USER, PASS);
             return con;
         } catch (SQLException ex) {
-            throw new RuntimeException("Erro na conexão: ",ex);
-        }                
+            throw new RuntimeException("Erro na conexão: ", ex);
+        }
     }
-    public static void closeConnection(Connection con){
+
+    public static void closeConnection(Connection con) {
         try {
-            if(con!= null){
+            if (con != null) {
                 con.close();
-            } 
+            }
         } catch (SQLException ex) {
             Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
-            }
         }
-    public static void closeConnection(Connection con, PreparedStatement stmt){
+    }
+
+    public static void closeConnection(Connection con, PreparedStatement stmt) {
         closeConnection(con);
         try {
-            if(stmt!= null){
+            if (stmt != null) {
                 stmt.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
-            }
         }
-    public static void closeConnection(Connection con, PreparedStatement stmt, ResultSet rs){
-        closeConnection(con,stmt);
+    }
+
+    public static void closeConnection(Connection con, PreparedStatement stmt, ResultSet rs) {
+        closeConnection(con, stmt);
         try {
-            if(rs!= null){
+            if (rs != null) {
                 rs.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
-            }
         }
-  
-    
-    
-    
-    
-    
-    
-    
-    
     }
 
-
+}

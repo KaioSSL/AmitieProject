@@ -16,8 +16,9 @@ public class Tipo_Documento {
     private String des;
     private String sigla;
     private Date dat_cad;
-    
-    public Tipo_Documento(){}
+
+    public Tipo_Documento() {
+    }
 
     public Date getDat_cad() {
         return dat_cad;
@@ -26,7 +27,7 @@ public class Tipo_Documento {
     public void setDat_cad(Date dat_cad) {
         this.dat_cad = dat_cad;
     }
-    
+
     public Integer getCod() {
         return cod;
     }
@@ -50,6 +51,5 @@ public class Tipo_Documento {
     public void setSigla(String sigla) {
         this.sigla = sigla;
     }
-    
-    
+
 }

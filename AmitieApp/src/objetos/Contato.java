@@ -17,8 +17,9 @@ public class Contato {
     private String contato;
     private Date dat_cad;
     private String des;
-    
-    public Contato(){}
+
+    public Contato() {
+    }
 
     public String getDes() {
         return des;
@@ -27,7 +28,7 @@ public class Contato {
     public void setDes(String des) {
         this.des = des;
     }
-    
+
     public Integer getCod() {
         return cod;
     }
@@ -59,5 +60,5 @@ public class Contato {
     public void setDat_cad(Date dat_cad) {
         this.dat_cad = dat_cad;
     }
-    
+
 }

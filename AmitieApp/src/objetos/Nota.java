@@ -20,10 +20,10 @@ public class Nota {
     private Integer cod_usuario;
     private Integer situacao;
     private Integer status;
-    
-    
-    public Nota(){}
-    
+
+    public Nota() {
+    }
+
     public Integer getCod() {
         return cod;
     }
@@ -55,6 +55,7 @@ public class Nota {
     public void setDat_nota(Date dat_nota) {
         this.dat_nota = dat_nota;
     }
+
     public Integer getCod_pedido() {
         return cod_pedido;
     }

@@ -22,8 +22,8 @@ public class Item {
     private Float unidade_total;
     private Date dat_cad;
 
-    
-    public Item(){}
+    public Item() {
+    }
 
     public Integer getTipo() {
         return tipo;
@@ -40,8 +40,7 @@ public class Item {
     public void setQtd(Float qtd) {
         this.qtd = qtd;
     }
-    
-    
+
     public Integer getCod() {
         return cod;
     }
@@ -105,5 +104,5 @@ public class Item {
     public void setCod_tipo(Integer cod_tipo) {
         this.tipo = cod_tipo;
     }
-    
+
 }

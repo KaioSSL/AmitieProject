@@ -11,7 +11,10 @@ package objetos;
  */
 public class Item_Entrada extends Item {
     private Integer cod_materia_prima;
-    public Item_Entrada(){}
+
+    public Item_Entrada() {
+    }
+
     public Integer getCod_materia_prima() {
         return cod_materia_prima;
     }
@@ -20,5 +23,4 @@ public class Item_Entrada extends Item {
         this.cod_materia_prima = cod_materia_prima;
     }
 
-    
 }

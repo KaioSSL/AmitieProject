@@ -13,8 +13,9 @@ public class Pessoa_Documento {
     private Integer cod;
     private Integer cod_documento;
     private Integer cod_pessoa;
-    
-    public Pessoa_Documento(){}
+
+    public Pessoa_Documento() {
+    }
 
     public Integer getCod() {
         return cod;

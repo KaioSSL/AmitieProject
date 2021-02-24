@@ -17,8 +17,9 @@ public class Categoria {
     private Date dat_cad;
     private String sigla;
     private String tags;
-    
-    public Categoria(){}
+
+    public Categoria() {
+    }
 
     public Integer getCod() {
         return cod;
@@ -59,5 +60,5 @@ public class Categoria {
     public void setTags(String tags) {
         this.tags = tags;
     }
-    
+
 }

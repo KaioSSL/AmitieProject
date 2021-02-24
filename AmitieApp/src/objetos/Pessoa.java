@@ -15,10 +15,11 @@ public class Pessoa {
     private Integer cod;
     private String nome;
     private Date dat_cad;
-    private Date dat_nasc;    
-    
-    public Pessoa(){}
-    
+    private Date dat_nasc;
+
+    public Pessoa() {
+    }
+
     public Integer getCod() {
         return cod;
     }
