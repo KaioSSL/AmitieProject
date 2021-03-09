@@ -15,7 +15,7 @@ import objetos.Usuario;
  *
  * @author kaiof
  */
-public class UsuarioDAO extends Usuario {
+public class UsuarioDAO{
     public static boolean insert(Usuario us) {
         // Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();

@@ -9,12 +9,12 @@ package objetos;
  *
  * @author kaiof
  */
-public class Pessoa_Endereco {
+public class PessoaDocumento {
     private Integer cod;
-    private Integer cod_endereco;
+    private Integer cod_documento;
     private Integer cod_pessoa;
 
-    public Pessoa_Endereco() {
+    public PessoaDocumento() {
     }
 
     public Integer getCod() {
@@ -25,12 +25,12 @@ public class Pessoa_Endereco {
         this.cod = cod;
     }
 
-    public Integer getCod_endereco() {
-        return cod_endereco;
+    public Integer getCod_documento() {
+        return cod_documento;
     }
 
-    public void setCod_endereco(Integer cod_endereco) {
-        this.cod_endereco = cod_endereco;
+    public void setCod_documento(Integer cod_documento) {
+        this.cod_documento = cod_documento;
     }
 
     public Integer getCod_pessoa() {
@@ -40,5 +40,4 @@ public class Pessoa_Endereco {
     public void setCod_pessoa(Integer cod_pessoa) {
         this.cod_pessoa = cod_pessoa;
     }
-
 }

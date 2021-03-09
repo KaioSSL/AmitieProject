@@ -5,9 +5,8 @@
  */
 package objetos;
 
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.LinkedList;
-
 /**
  *
  * @author kaiof
@@ -21,9 +20,10 @@ public class Produto {
     private Integer val_dias;
     private Integer cod_unidade;
     private Integer cod_categoria;
-    private LinkedList<Produto_Materia> materia;
+    private ArrayList<MateriaPrima> materias;
 
-    public Produto() {
+    public Produto(){
+        this.materias = new ArrayList<>();
     }
 
     public Integer getCod() {
@@ -90,11 +90,14 @@ public class Produto {
         this.cod_categoria = cod_categoria;
     }
 
-    public LinkedList<Produto_Materia> getMateria() {
-        return materia;
+    public ArrayList<MateriaPrima> getMaterias() {
+        return materias;
     }
 
-    public void setMateria(LinkedList<Produto_Materia> materia) {
-        this.materia = materia;
+    public void setMaterias(ArrayList<MateriaPrima> materias) {
+        this.materias = materias;
+    }
+    public void addMateria(MateriaPrima materia){
+        this.materias.add(materia);
     }
 }

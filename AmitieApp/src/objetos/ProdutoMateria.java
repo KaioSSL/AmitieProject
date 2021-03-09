@@ -9,7 +9,7 @@ package objetos;
  *
  * @author kaiof
  */
-public class Produto_Materia {
+public class ProdutoMateria {
     private Integer cod;
     private Integer cod_materia_prima;
     private Integer cod_produto;
@@ -19,7 +19,7 @@ public class Produto_Materia {
     private Float vlr_total_custo;
     private Float vlr_total_venda;
 
-    public Produto_Materia() {
+    public ProdutoMateria() {
     }
 
     public Integer getCod() {

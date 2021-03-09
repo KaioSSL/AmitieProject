@@ -9,12 +9,12 @@ package objetos;
  *
  * @author kaiof
  */
-public class Pessoa_Contato {
+public class PessoaContato {
     private Integer cod;
     private Integer cod_pessoa;
     private Integer cod_contato;
 
-    public Pessoa_Contato() {
+    public PessoaContato() {
     }
 
     public Integer getCod() {

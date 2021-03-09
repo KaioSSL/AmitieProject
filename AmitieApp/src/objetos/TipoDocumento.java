@@ -11,13 +11,13 @@ import java.util.Date;
  *
  * @author kaiof
  */
-public class Tipo_Documento {
+public class TipoDocumento {
     private Integer cod;
     private String des;
     private String sigla;
     private Date dat_cad;
 
-    public Tipo_Documento() {
+    public TipoDocumento() {
     }
 
     public Date getDat_cad() {

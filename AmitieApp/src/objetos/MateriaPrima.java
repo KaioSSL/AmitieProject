@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author kaiof
  */
-public class Materia_Prima {
+public class MateriaPrima {
     private Integer cod;
     private String des;
     private Float vlr_custo;
@@ -21,7 +21,7 @@ public class Materia_Prima {
     private String marca;
     private Date dat_cad;
 
-    public Materia_Prima() {
+    public MateriaPrima() {
     }
 
     public Date getDat_cad() {

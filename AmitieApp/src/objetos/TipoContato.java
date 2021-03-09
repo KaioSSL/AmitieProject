@@ -11,13 +11,13 @@ import java.util.Date;
  *
  * @author kaiof
  */
-public class Tipo_Contato {
+public class TipoContato {
     private Integer cod;
     private String des;
     private String sigla;
     private Date dat_cad;
 
-    public Tipo_Contato() {
+    public TipoContato() {
     }
 
     public Integer getCod() {

@@ -9,30 +9,30 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import objetos.Pessoa_Contato;
+import objetos.PessoaEndereco;
 
 /**
  *
  * @author kaiof
  */
-public class Pessoa_ContatoDAO extends Pessoa_Contato {
-    public static boolean insert(Pessoa_Contato pesc) {
+public class PessoaEnderecoDAO extends PessoaEndereco {
+    public static boolean insert(PessoaEndereco pese) {
         // Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();
         // Crio meu Statement para tratar a query á ser utilizada
         PreparedStatement stmt = null;
         try {
             // Escrevo minha query utilizando ? para posicionar os parametros
-            stmt = con.prepareStatement("INSERT INTO PESSOA_CONTATO(COD_PESSOA,COD_CONTATO) VALUES(?,?)");
+            stmt = con.prepareStatement("INSERT INTO PESSOA_ENDERECO(COD_PESSOA,COD_ENDERECO) VALUES(?,?)");
             // Insiro os parametros em cada posição e com seu tipo
-            stmt.setInt(1, pesc.getCod_pessoa());
-            stmt.setInt(2, pesc.getCod_contato());
+            stmt.setInt(1, pese.getCod_pessoa());
+            stmt.setInt(2, pese.getCod_endereco());
             // executeUpdate é utilizado para operações que não retornam um result set,
             // operações DML
             stmt.executeUpdate();
         } catch (SQLException e) {
             // Caso erro, mostro ao usuário.
-            JOptionPane.showMessageDialog(null, "Erro de inserção na classe Pessoa Contato " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro de inserção na classe Pessoa Endereco " + e.getMessage());
             return false;
         } finally {
             ConnectionFactory.closeConnection(con, stmt);
@@ -40,22 +40,22 @@ public class Pessoa_ContatoDAO extends Pessoa_Contato {
         return true;
     }
 
-    public static boolean delete(Pessoa_Contato pesc) {
+    public static boolean delete(PessoaEndereco pese) {
         // Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();
         // Crio meu Statement para tratar a query á ser utilizada
         PreparedStatement stmt = null;
         try {
             // Escrevo minha query utilizando ? para posicionar os parametros
-            stmt = con.prepareStatement("DELETE FROM PESSOA_CONTATO WHERE COD = ?");
+            stmt = con.prepareStatement("DELETE FROM PESSOA_ENDERECO WHERE COD = ?");
             // Insiro os parametros em cada posição e com seu tipo
-            stmt.setInt(1, pesc.getCod());
+            stmt.setInt(1, pese.getCod());
             // executeUpdate é utilizado para operações que não retornam um result set,
             // operações DML
             stmt.executeUpdate();
         } catch (SQLException e) {
             // Caso erro, mostro ao usuário.
-            JOptionPane.showMessageDialog(null, "Erro de deleção na classe Pessoa Contato " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro de deleção na classe Pessoa Endereco " + e.getMessage());
             return false;
         } finally {
             ConnectionFactory.closeConnection(con, stmt);
@@ -63,24 +63,24 @@ public class Pessoa_ContatoDAO extends Pessoa_Contato {
         return true;
     }
 
-    public static boolean update(Pessoa_Contato pesc) {
+    public static boolean update(PessoaEndereco pese) {
         // Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();
         // Crio meu Statement para tratar a query á ser utilizada
         PreparedStatement stmt = null;
         try {
             // Escrevo minha query utilizando ? para posicionar os parametros
-            stmt = con.prepareStatement("UPDATE PESSOA_CONTATO SET COD_PESSOA = ?, COD_CONTATO = ? WHERE COD = ?");
+            stmt = con.prepareStatement("UPDATE PESSOA_ENDERECO SET COD_PESSOA = ?, COD_ENDERECO = ? WHERE COD = ?");
             // Insiro os parametros em cada posição e com seu tipo
-            stmt.setInt(1, pesc.getCod_pessoa());
-            stmt.setInt(2, pesc.getCod_contato());
-            stmt.setInt(3, pesc.getCod());
+            stmt.setInt(1, pese.getCod_pessoa());
+            stmt.setInt(2, pese.getCod_endereco());
+            stmt.setInt(3, pese.getCod());
             // executeUpdate é utilizado para operações que não retornam um result set,
             // operações DML
             stmt.executeUpdate();
         } catch (SQLException e) {
             // Caso erro, mostro ao usuário.
-            JOptionPane.showMessageDialog(null, "Erro de update na classe Pessoa Contato " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro de update na classe Pessoa Endereco " + e.getMessage());
             return false;
         } finally {
             ConnectionFactory.closeConnection(con, stmt);

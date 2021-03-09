@@ -7,6 +7,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import objetos.Produto;
@@ -15,7 +16,7 @@ import objetos.Produto;
  *
  * @author kaiof
  */
-public class ProdutoDAO extends Produto {
+public class ProdutoDAO{
     public static boolean insert(Produto prod) {
         // Crio Conexão com o Servidor do Banco
         Connection con = ConnectionFactory.getConnection();
@@ -96,5 +97,30 @@ public class ProdutoDAO extends Produto {
             ConnectionFactory.closeConnection(con, stmt);
         }
         return true;
+    }
+    
+    public static Integer getLast(){
+        //Crio Conexão com o servidor do Banco
+        Connection con = ConnectionFactory.getConnection();
+        //Crio meu Statemenet para tratar a query á ser utilizada
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        Integer last_cod;
+        try{
+            //Escrevo minha query
+            stmt = con.prepareCall("SELECT MAX(COD) AS LAST_COD FROM PRODUTO");
+            rs = stmt.executeQuery();
+            if(rs.next()){
+                last_cod = rs.getInt("LAST_COD");
+                return last_cod;
+            }   
+        } catch (SQLException e) {
+            // Caso erro, mostro ao usuário.
+            JOptionPane.showMessageDialog(null, "Erro no getLast cod Produto " + e.getMessage());
+            
+        } finally {
+            ConnectionFactory.closeConnection(con, stmt, rs);
+        }
+        return 0;
     }
 }
