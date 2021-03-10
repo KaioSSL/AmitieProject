@@ -38,4 +38,14 @@ public class CTLMateriaPrima {
         return MateriaPrimaDAO.update(materiaPrima);
     }
     
+    public Integer getSaldo(Integer cod){
+        MateriaPrima materiaPrima = new MateriaPrima();
+        materiaPrima.setCod(cod);
+        return MateriaPrimaDAO.getSaldo(materiaPrima);
+    }
+    public String getDescMateria(Integer cod){
+        MateriaPrima materiaPrima = new MateriaPrima();
+        materiaPrima.setCod(cod);
+        return MateriaPrimaDAO.getMateria(materiaPrima).getDes();
+    }
 }

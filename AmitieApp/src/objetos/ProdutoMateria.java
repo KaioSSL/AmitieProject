@@ -16,6 +16,7 @@ public class ProdutoMateria {
     private Float vlr_unit_custo;
     private Float vlr_unit_venda;
     private Float unidade_total;
+    private Float qtd;
     private Float vlr_total_custo;
     private Float vlr_total_venda;
 
@@ -84,6 +85,14 @@ public class ProdutoMateria {
 
     public void setVlr_total_venda(Float vlr_total_venda) {
         this.vlr_total_venda = vlr_total_venda;
+    }
+
+    public Float getQtd() {
+        return qtd;
+    }
+
+    public void setQtd(Float qtd) {
+        this.qtd = qtd;
     }
 
 }

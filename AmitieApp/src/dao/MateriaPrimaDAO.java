@@ -5,8 +5,10 @@
  */
 package dao;
 
+import connectionfactory.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import objetos.MateriaPrima;
@@ -96,6 +98,69 @@ public class MateriaPrimaDAO{
             ConnectionFactory.closeConnection(con, stmt);
         }
         return true;
+    }
+    
+    public static Integer getSaldo(MateriaPrima mat){
+        //Crio conexão com o servidor do banco
+        Connection con = ConnectionFactory.getConnection();
+        //Crio o meu Statemente
+        PreparedStatement stmt = null;
+        // Crio result set
+        ResultSet rs = null;
+        try{
+            stmt = con.prepareStatement(""
+                    + "SELECT SUM(PRODUTO_MATERIA.QTD) - SUM(ITEM_ENTRADA.QTD) AS SALDO"
+                    + "FROM PRODUTO_MATERIA,"
+                    + "ITEM_ENTRADA "
+                    + "WHERE PRODUTO_MATERIA.COD_MATERIA  = ? "
+                    + "AND ITEM_ENTRADA.COD_MATERIA = ?");
+            stmt.setInt(1, mat.getCod());
+            stmt.setInt(2, mat.getCod());
+            rs = stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt("SALDO");
+            }
+            
+        
+        } catch (SQLException e) {
+            // Caso erro, mostro ao usuário.
+            JOptionPane.showMessageDialog(null, "Erro de update na classe Materia Prima " + e.getMessage());
+        } finally {
+            ConnectionFactory.closeConnection(con, stmt);
+        }
+        return 0;
+    }
+    
+    public static MateriaPrima getMateria(MateriaPrima mat){
+        //Crio conexão com o servidor do banco
+        Connection con = ConnectionFactory.getConnection();
+        //Crio o meu Statemente
+        PreparedStatement stmt = null;
+        // Crio result set
+        ResultSet rs = null;        
+        try{
+            stmt = con.prepareStatement("SLEECT * FROM MATERIA_PRIMA WHERE COD = ?");
+            stmt.setInt(1, mat.getCod());
+            rs = stmt.executeQuery();
+            if(rs.next()){
+                mat.setDes(rs.getString("DES"));
+                mat.setVlr_custo(rs.getFloat("VLR_CUSTO"));
+                mat.setVlr_venda(rs.getFloat("VLR_VENDA"));
+                mat.setFabricante(rs.getString("FABRICANTE"));
+                mat.setMarca(rs.getString("MARCA"));
+                mat.setCod_unidade(rs.getInt("COD_UNIDADE"));
+            }else{
+                JOptionPane.showMessageDialog(null,"Erro ao consultar materia prima");
+            }
+            
+        
+        } catch (SQLException e) {
+            // Caso erro, mostro ao usuário.
+            JOptionPane.showMessageDialog(null, "Erro ao consultar Materia Prima " + e.getMessage());
+        } finally {
+            ConnectionFactory.closeConnection(con, stmt);
+        }
+        return mat;
     }
 
 }

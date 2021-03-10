@@ -5,6 +5,7 @@
  */
 package objetos;
 
+import dp_observer.MateriaPrimaObservador;
 import java.util.Date;
 
 /**
@@ -20,6 +21,7 @@ public class MateriaPrima {
     private String fabricante;
     private String marca;
     private Date dat_cad;
+    private MateriaPrimaObservador mpObservador = new MateriaPrimaObservador();
 
     public MateriaPrima() {
     }
@@ -87,5 +89,14 @@ public class MateriaPrima {
     public void setMarca(String marca) {
         this.marca = marca;
     }
+
+    public MateriaPrimaObservador getMpObservador() {
+        return mpObservador;
+    }
+
+    public void setMpObservador(MateriaPrimaObservador mpObservador) {
+        this.mpObservador = mpObservador;
+    }
+    
 
 }

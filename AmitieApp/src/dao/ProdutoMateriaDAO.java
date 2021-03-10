@@ -5,6 +5,7 @@
  */
 package dao;
 
+import connectionfactory.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -24,15 +25,16 @@ public class ProdutoMateriaDAO{
         try {
             // Escrevo minha query utilizando ? para posicionar os parametros
             stmt = con.prepareStatement(
-                    "INSERT INTO PRODUTO_MATERIA(VLR_UNIT_CUSTO,VLR_UNIT_VENDA,UNIDADE_TOTAL,VLR_TOTAL_CUSTO,VLR_TOTAL_VENDA,COD_MATERIA_PRIMA,COD_PRODUTO) VALUES(?,?,?,?,?,?,?)");
+                    "INSERT INTO PRODUTO_MATERIA(VLR_UNIT_CUSTO,VLR_UNIT_VENDA,QTD,UNIDADE_TOTAL,VLR_TOTAL_CUSTO,VLR_TOTAL_VENDA,COD_MATERIA_PRIMA,COD_PRODUTO) VALUES(?,?,?,?,?,?,?,?)");
             // Insiro os parametros em cada posição e com seu tipo
             stmt.setFloat(1, prod_m.getVlr_unit_custo());
             stmt.setFloat(2, prod_m.getVlr_unit_venda());
-            stmt.setFloat(3, prod_m.getUnidade_total());
-            stmt.setFloat(4, prod_m.getVlr_total_custo());
-            stmt.setFloat(5, prod_m.getVlr_total_venda());
-            stmt.setInt(6, prod_m.getCod_materia_prima());
-            stmt.setInt(7, prod_m.getCod_produto());
+            stmt.setFloat(3, prod_m.getQtd());
+            stmt.setFloat(4, prod_m.getUnidade_total());
+            stmt.setFloat(5, prod_m.getVlr_total_custo());
+            stmt.setFloat(6, prod_m.getVlr_total_venda());
+            stmt.setInt(7, prod_m.getCod_materia_prima());
+            stmt.setInt(8, prod_m.getCod_produto());
             // executeUpdate é utilizado para operações que não retornam um result set,
             // operações DML
             stmt.executeUpdate();
@@ -82,16 +84,17 @@ public class ProdutoMateriaDAO{
         try {
             // Escrevo minha query utilizando ? para posicionar os parametros
             stmt = con.prepareStatement(
-                    "UPDATE PRODUTO_MATERIA SET VLR_UNIT_CUSTO = ?, VLR_UNIT_VENDA = ?, UNIDADE_TOTAL = ?, VLR_TOTAL_CUSTO = ?, VLR_TOTAL_VENDA = ?, COD_MATERIA_PRIMA = ?, COD_PRODUTO = ? WHERE COD = ?");
+                    "UPDATE PRODUTO_MATERIA SET VLR_UNIT_CUSTO = ?, VLR_UNIT_VENDA = ?, QTD = ?,  UNIDADE_TOTAL = ?,VLR_TOTAL_CUSTO = ?, VLR_TOTAL_VENDA = ?, COD_MATERIA_PRIMA = ?, COD_PRODUTO = ? WHERE COD = ?");
             // Insiro os parametros em cada posição e com seu tipo
             stmt.setFloat(1, prod_m.getVlr_unit_custo());
             stmt.setFloat(2, prod_m.getVlr_unit_venda());
-            stmt.setFloat(3, prod_m.getUnidade_total());
-            stmt.setFloat(4, prod_m.getVlr_total_custo());
-            stmt.setFloat(5, prod_m.getVlr_total_venda());
-            stmt.setInt(6, prod_m.getCod_materia_prima());
-            stmt.setInt(7, prod_m.getCod_produto());
-            stmt.setInt(8, prod_m.getCod());
+            stmt.setFloat(3, prod_m.getQtd());
+            stmt.setFloat(4, prod_m.getUnidade_total());
+            stmt.setFloat(5, prod_m.getVlr_total_custo());
+            stmt.setFloat(6, prod_m.getVlr_total_venda());
+            stmt.setInt(7, prod_m.getCod_materia_prima());
+            stmt.setInt(8, prod_m.getCod_produto());
+            stmt.setInt(9, prod_m.getCod());
             // executeUpdate é utilizado para operações que não retornam um result set,
             // operações DML
             stmt.executeUpdate();
