@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="AmitieApp/src"/>
+	<classpathentry kind="lib" path="AmitieApp/dist/AmitieApp.jar"/>
+	<classpathentry kind="lib" path="AmitieApp/dist/lib/postgresql-42.2.18.jar"/>
+	<classpathentry kind="lib" path="AmitieApp/lib/CopyLibs/org-netbeans-modules-java-j2seproject-copylibstask.jar"/>
+	<classpathentry kind="lib" path="AmitieApp/lib/postgresql-42.2.18.jar"/>
+	<classpathentry kind="output" path="AmitieApp/build/classes"/>
+</classpath>
